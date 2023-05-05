@@ -1,0 +1,24 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  labels:
+    app: si-deployment
+  name: si-deployment
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: si-deployment
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        app: si-deployment
+    spec:
+      containers:
+      - image: drehnstrom/space-invaders
+        name: space-invaders
+        resources: {}
+status: {}
